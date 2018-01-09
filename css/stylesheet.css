@@ -190,6 +190,16 @@ h3
     margin: 0;
 }
 
+#foot_custom
+{
+    transform: translateX(-1.4rem)
+}
+
+#foot_store
+{
+    transform: translateX(0.445rem)
+}
+
 .icon_img
 {
     width: 3rem;
