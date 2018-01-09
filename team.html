@@ -1,0 +1,105 @@
+<html>
+
+    <head>
+        <title>Eclipse Skis - Team</title>
+        <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="JS/script.js"></script>
+    </head>    
+    
+    <body>
+                <div class="nav">
+            <label for="toggle">&#9776;</label>
+            <input type="checkbox" id="toggle"/>
+            <div class="menu">
+                <a id="logo" href="index.html"></a>
+                <a href="index.html">Home</a>
+                <a href="#">Store</a>
+                <a href="team.html">Team</a>
+                <a href="#"><span>Custom</span></a>
+            </div>
+        </div>
+        <div>
+            <h1>Meet the Team</h1>
+        </div>
+        <div id="team_pics">
+            <h4>The Team</h4>
+            <hr id="team_sep">
+            <div class="team_container">
+                <ul class="team_grid">
+                    <li>
+                        <div class="team_box team_box_img1">
+                            <a href="#">
+                                <div class="team_info">
+                                    <h5>Tanner Hall</h5>
+                                    <p>Infamous on and off the mountain for his antics</p>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="team_box team_box_img2">
+                            <a href="#">
+                                <div class="team_info">
+                                    <h5>Sean Pettit</h5>
+                                    <p>Founding member of Eclipse Skis</p>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="team_box team_box_img3">
+                            <a href="#">
+                                <div class="team_info">
+                                    <h5>Henrik Harlaut</h5>
+                                    <p>World renown slopestyle skier now representing Eclipse Skis</p>
+                                </div>
+                            </a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div>
+            <h1>Visit us</h1>
+        </div>
+        <div id="map"></div>
+    <script src="JS/script.js">
+      /*function initMap() {
+        var uluru = {lat:53.3849,lng:-1.4603};
+        var map = new google.maps.Map(document.getElementById('map'), {
+          zoom: 14,
+          center: uluru
+        });
+        var marker = new google.maps.Marker({
+          position: uluru,
+          map: map
+        });
+      }*/
+    </script>
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDSGb9DWNNSn5IJMvhsZoVoYXw-hQ_xcFg	 &callback=initMap">
+    </script>
+        
+    </body>
+
+    <footer>
+        <div class="footnav">
+            <ul>
+                <li class="li_foot"><a href="#">Store</a></li>
+                <li class="li_foot"><a href="team.html">Team</a></li>
+                <li class="li_foot"><a href="#">Custom</a></li>
+            </ul>
+        </div>
+        <div class="social_container">
+            <div class="social_icon"><a href="https://www.facebook.com"><img class="icon_img" src="assets/images/social_media/if_1_Media_social_website_facebook_2657542.png" alt="Facebook"></a></div>
+            <div class="social_icon"><a href="https://www.twitter.com"><img class="icon_img" src="assets/images/social_media/if_12_Media_social_website_Twitter_2657545.png" alt="Twitter"></a></div>
+            <div class="social_icon"><a href="https://www.instagram.com"><img class="icon_img" src="assets/images/social_media/if_2_Media_social_website_instagram_2657553.png" alt="instagram"></a>
+            </div>
+        </div>
+        <div id="copyright">
+        <p>©Copyright 2018, Eclipse Skis</p>
+        </div>
+    </footer>
+</html>
