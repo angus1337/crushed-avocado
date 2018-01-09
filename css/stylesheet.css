@@ -306,17 +306,17 @@ h4
 
 .team_box_img1
 {
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.1)), url(/assets/images/thall.jpg);
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.1)), url(../assets/images/thall.jpg);
 }
 
 .team_box_img2
 {
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.1)), url(/assets/images/spetit.jpg);
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.1)), url(../assets/images/spetit.jpg);
 }
 
 .team_box_img3
 {
-    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.1)), url(/assets/images/hharlaut.jpg);
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.1)), url(../assets/images/hharlaut.jpg);
 }
 
 .team_info
