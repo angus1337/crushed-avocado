@@ -1,9 +1,10 @@
 <html>
     <head>
-        <title>Eclipse Skis - Home</title>
+        <title>Eclipse Skis - Freeride Skis</title>
         <link rel="stylesheet" type="text/css" href="css/stylesheet.css">
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="JS/script.js"></script>
     </head>
     
     <body>
@@ -20,33 +21,35 @@
             </div>
         </div>
         <div>
-            <h1>Witness the eclipse.</h1>
+            <h1>Gear up.</h1>
         </div>
         <div id="intro">
-            <h2>Eclipse Skis</h2>
+            <h2>Freeride Store</h2>
             <hr class="introdivider">
-            <article>
-            <p id="introtext">At Eclipse Skis, we strive to deliver the best qaulity products that are designed with quality that is built to last. Whether you're ripping through the backcountry or lapping the park, we offer a ski for every scenario.</p>
-            </article>
+        <div class="store_container">
+            <div class="ski section">
+                <section id="rightbox" ondrop="drop(event)" ondragover="allowDrop(event)">ECLIPSE BLOODMOON
+                <img id="ski1" src="assets/images/freeride2.png" draggable="true" ondragstart="drag(event)" ondragover="allowDrop(event)">
+                </section>
+                <section id="rightbox1" ondrop="drop(event)" ondragover="allowDrop(event)">ECLIPSE ERUPTION
+                <img id="ski1" src="assets/images/freeride3.png" draggable="true" ondragstart="drag(event)" ondragover="allowDrop(event)">
+                </section>
+            </div>
+            <div class="basket_section">
+                <section id="leftbox" ondrop="drop(event)" ondragover="allowDrop(event)"><h4>Your Basket</h4></section>
+            </div>
+        </div>
+            <button id="checkout" onclick="clickAlert()">CHECKOUT</button>
+            <script>funtion clickAlert() {alert("Go to checkout?");}</script>
         </div>
         <div>
-            <h1>Conquer the mountain.</h1>
+            
         </div>
-        <div class="videocontainer">
-            <video src="assets/videos/powdermagvideo.mp4" preload="auto" id="video" autoplay="autoplay" loop="loop" muted></video>
-        </div>
-        <div>
-            <h1>Join the movement.</h1>
-        </div>
-        <div id="intro">
-            <hr class="introdivider">
-            <a id="shoplink" href="store.html">17/18 Collection</a>
-            <hr class="introdivider">
-        </div>
+
         <footer>
             <div class="footnav">
                 <ul>
-                <li class="li_foot" id="foot_store"><a href="#">Store</a></li>
+                <li class="li_foot" id="foot_store"><a href="store.html">Store</a></li>
                 <li class="li_foot"><a href="team.html">Team</a></li>
                 <li class="li_foot" id="foot_custom"><a href="custom.html">Custom</a></li>
             </ul>

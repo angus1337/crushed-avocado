@@ -68,7 +68,8 @@ label {
     padding: 1rem;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 500px) 
+{
     label {
         width: 100%;
         display: block;
@@ -358,4 +359,161 @@ h4
     height: 25rem;
     width: 100%;
     background-color: ghostwhite;
+}
+
+.img_container
+{
+    margin: 0 auto;
+    margin-top: 20px;
+    position: relative;
+    width: 80%;
+    height: auto;
+    padding-bottom: 40%;
+    background-color: ghostwhite;
+    border: solid slategray;
+}
+
+.slide_img
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.slide_img img
+{
+    width: 100%;
+    height: 100%;
+}
+
+#img1, #img2, #img3 {
+    display: none;
+}
+
+.previous, .next {
+    width: 12%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    background: rgba(88,88,88,0.4);
+    z-index: 99;
+    cursor: pointer;
+}
+
+.previous
+{
+    right: 0;
+    display: block;
+}
+
+.next
+{
+    left: 0;
+    display: block;
+}
+
+.pic_nav
+{
+    width: 100%;
+    height: 1rem;
+    bottom: 12%;
+    position: absolute;
+    text-align: center;
+    z-index: 99;
+}
+
+.dots
+{
+    top: 1rem;
+    width: 0.8rem;
+    height: 0.8rem;
+    margin: 0 1rem;
+    position: relative;
+    border-radius: 50%;
+    display: inline-block;
+    background: rgba(0,0,0,0.8);
+    right: 8.5rem;
+}
+
+.slide_img
+{
+    z-index: -1;
+}
+
+#img1:checked ~ #one,
+#img2:checked ~ #two,
+#img3:checked ~ #three {
+    z-index: 9;
+}
+
+#img1:checked ~ .pic_nav #dot1,
+#img2:checked ~ .pic_nav #dot2,
+#img3:checked ~ .pic_nav #dot3 {
+    background: ghostwhite;
+}
+
+.team_box_img4
+{
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.1)), url(../assets/images/freeride.jpg);
+}
+
+.team_box_img5
+{
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.1)), url(../assets/images/freestyle.jpg);
+}
+
+.team_box_img6
+{
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.1)), url(../assets/images/powder.jpg);
+}
+
+#ski1
+{
+    height: 240px;
+    width: 240px;
+    transform: translateY(40px)
+}
+
+#leftbox
+{
+    width: 80%;
+    height: 25rem;
+    margin: 5px;
+    border: 3px solid slategray;
+    float: right;
+    transform: translate(-3.5rem);
+}
+
+#rightbox
+{
+    width: 20rem;
+    height: 20rem;
+    margin: 5px;
+    border: 3px solid darkslategray;
+    display: inline-block;
+}
+
+#rightbox1
+{
+    width: 20rem;
+    height: 20rem;
+    margin: 5px;
+    border: 3px solid darkslategray;
+    float: left;
+}
+
+.store_container
+{
+    padding-bottom: 28rem;
+}
+
+.custom_container
+{
+    padding-top: 20rem;
+    padding-bottom: 20rem;
+}
+
+#result
+{
+    text-align: center;
 }

@@ -1,48 +1,6 @@
-//Google Maps script
-
-function initMap() {
-        var uluru = {lat:53.3849,lng:-1.4603};
-        var map = new google.maps.Map(document.getElementById('map'), {
-          zoom: 14,
-          center: uluru
-        });
-        var marker = new google.maps.Marker({
-          position: uluru,
-          map: map
-        });
-      }
-
-//Store drag and drop script
-function allowDrop(ev) {
-    ev.preventDefault();
-}
-
-function drag(ev) {
-    ev.dataTransfer.setData("text", ev.target.id);
-}
-
-function drop(ev) {
-    ev.preventDefault();
-    var data = ev.dataTransfer.getData("text");
-    ev.target.appendChild(document.getElementById(data));
-}
-
-//Local storage for cheer counter
-function clickCounter() {
-    if(typeof(Storage) !== "undefined") {
-        if (sessionStorage.clickcount) {
-            sessionStorage.clickcount = Number(sessionStorage.clickcount)+1;
-        } else {
-            sessionStorage.clickcount = 1;
-        }
-        document.getElementById("result").innerHTML = "You have cheered " + sessionStorage.clickcount + " time(s) in this session!";
-    } else {
-        document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage.";
-    }
-}
-
-//funtions for custom canvas
-var canvas, ctx, flag = false,
+ <html>
+    <script type="text/javascript">
+    var canvas, ctx, flag = false,
         prevX = 0,
         currX = 0,
         prevY = 0,
@@ -112,7 +70,7 @@ var canvas, ctx, flag = false,
     }
     
     function erase() {
-        var m = confirm("Are you sure you want to clear you design?");
+        var m = confirm("Want to clear");
         if (m) {
             ctx.clearRect(0, 0, w, h);
             document.getElementById("canvasimg").style.display = "none";
@@ -130,8 +88,8 @@ var canvas, ctx, flag = false,
         if (res == 'down') {
             prevX = currX;
             prevY = currY;
-            currX = e.pageX - canvas.offsetLeft;
-            currY = e.pageY - canvas.offsetTop;
+            currX = e.clientX - canvas.offsetLeft;
+            currY = e.clientY - canvas.offsetTop;
     
             flag = true;
             dot_flag = true;
@@ -150,11 +108,26 @@ var canvas, ctx, flag = false,
             if (flag) {
                 prevX = currX;
                 prevY = currY;
-                currX = e.pageX - canvas.offsetLeft;
-                currY = e.pageY - canvas.offsetTop;
+                currX = e.clientX - canvas.offsetLeft;
+                currY = e.clientY - canvas.offsetTop;
                 draw();
             }
         }
     }
-
-
+    </script>
+    <body onload="init()">
+        <canvas id="can" width="400" height="400" style="position:absolute;top:10%;left:10%;border:2px solid;"></canvas>
+        <div style="position:absolute;top:12%;left:43%;">Choose Color</div>
+        <div style="position:absolute;top:15%;left:45%;width:10px;height:10px;background:green;" id="green" onclick="color(this)"></div>
+        <div style="position:absolute;top:15%;left:46%;width:10px;height:10px;background:blue;" id="blue" onclick="color(this)"></div>
+        <div style="position:absolute;top:15%;left:47%;width:10px;height:10px;background:red;" id="red" onclick="color(this)"></div>
+        <div style="position:absolute;top:17%;left:45%;width:10px;height:10px;background:yellow;" id="yellow" onclick="color(this)"></div>
+        <div style="position:absolute;top:17%;left:46%;width:10px;height:10px;background:orange;" id="orange" onclick="color(this)"></div>
+        <div style="position:absolute;top:17%;left:47%;width:10px;height:10px;background:black;" id="black" onclick="color(this)"></div>
+        <div style="position:absolute;top:20%;left:43%;">Eraser</div>
+        <div style="position:absolute;top:22%;left:45%;width:15px;height:15px;background:white;border:2px solid;" id="white" onclick="color(this)"></div>
+        <img id="canvasimg" style="position:absolute;top:10%;left:52%;" style="display:none;">
+        <input type="button" value="save" id="btn" size="30" onclick="save()" style="position:absolute;top:55%;left:10%;">
+        <input type="button" value="clear" id="clr" size="23" onclick="erase()" style="position:absolute;top:55%;left:15%;">
+    </body>
+    </html>
